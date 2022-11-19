@@ -1,0 +1,42 @@
+export const popularBooks =[
+{
+    id:1,
+    img:"https://media.npr.org/assets/img/2022/09/29/hero_custom-e3bbfda6925dc773b27ec4026ad5e8cf93019072.jpg",
+    name:"react"
+},
+{
+    id:2,
+    img:"https://media.npr.org/assets/img/2022/09/29/hero_custom-e3bbfda6925dc773b27ec4026ad5e8cf93019072.jpg",
+    name:"php"
+},
+{
+    id:3,
+    img:"https://media.npr.org/assets/img/2022/09/29/hero_custom-e3bbfda6925dc773b27ec4026ad5e8cf93019072.jpg",
+    name:"laravel"
+},
+{
+    id:4,
+    img:"https://media.npr.org/assets/img/2022/09/29/hero_custom-e3bbfda6925dc773b27ec4026ad5e8cf93019072.jpg",
+    name:"html"
+},
+{
+    id:5,
+    img:"https://media.npr.org/assets/img/2022/09/29/hero_custom-e3bbfda6925dc773b27ec4026ad5e8cf93019072.jpg",
+    name:"css"
+},
+{
+    id:6,
+    img:"https://media.npr.org/assets/img/2022/09/29/hero_custom-e3bbfda6925dc773b27ec4026ad5e8cf93019072.jpg",
+    name:"t=javascript"
+},
+{
+    id:7,
+    img:"https://media.npr.org/assets/img/2022/09/29/hero_custom-e3bbfda6925dc773b27ec4026ad5e8cf93019072.jpg",
+    name:"wordpress"
+},
+{
+    id:8,
+    img:"https://media.npr.org/assets/img/2022/09/29/hero_custom-e3bbfda6925dc773b27ec4026ad5e8cf93019072.jpg",
+    name:"java"
+},
+];
