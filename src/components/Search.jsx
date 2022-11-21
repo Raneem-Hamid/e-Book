@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import styled from 'styled-components'
 import SearchIcon from '@mui/icons-material/Search';
 import {mobile} from "../responsive"
@@ -52,13 +52,26 @@ align-items: center;
 justify-content: flex-end;
 margin: 0px 150px 0px 0px;
 `;
+const Rating=styled.input`
+margin: .4rem;
+`;
+const Label=styled.label`
+font: 1rem 'Fira Sans', sans-serif;
+`;
 
 // console.log(data);
 
-function Search({setResult}) {
+function Search({setResult,setResult2}) {
     const [search,setSearch]=useState("");
+    const [rating,setRating]=useState("");
 
-    const handleSearch=(e)=>{
+   
+    useEffect(() => {
+        
+        setResult2(rating);
+      }, [rating]);
+
+     const handleSearch=(e)=>{
         e.preventDefault();
         setResult(search);
     }
@@ -74,7 +87,14 @@ function Search({setResult}) {
         </SearchContainer>
 
     </Left>
-    <Right>text</Right>
+    <Right>
+    <Rating type="range" id="volume" name="volume"
+         min="0" max="5" value={rating}
+         onChange={(e) => {
+           setRating(e.target.value);}}/>
+           <Label for="cowbell">Filter by Rating</Label>
+
+    </Right>
     </Wrapper>
    </Container>
   )

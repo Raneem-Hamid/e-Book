@@ -2,6 +2,8 @@ import { EmailOutlined, PhoneInTalkOutlined, Place } from '@mui/icons-material';
 import React from 'react'
 import styled from 'styled-components';
 import { mobile } from "../responsive"
+import { Link } from 'react-router-dom';
+
 
 
 const Container = styled.div`
@@ -87,7 +89,7 @@ function Footer() {
         <Container>
             <Left>
                 <Title>About us</Title>
-                <Des>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis eligendi corrupti tempore facilis beatae. Adipisci aspernatur voluptates doloribus harum minima, explicabo, sed voluptatibus nostrum quo itaque laborum quam omnis asperiores!
+                <Des>A website that helps you find the books you want, know the author, read the description of the book, and know its rating, and you can add it to your favorites list..!
                 </Des>
                 {/* <SocialContainer>
                     <SocialIcon>
@@ -102,10 +104,10 @@ function Footer() {
             <Center>
                 <Text>Useful Links</Text>
                 <List>
-                    <ListItem>Home</ListItem>
-                    <ListItem>Wishlist</ListItem>
-                    <ListItem>MY Account</ListItem>
-                    <ListItem>link</ListItem>
+                {/* <Link to="/" style={{ textDecoration: 'none', color: 'black' }}><ListItem>HOME</ListItem></Link> */}
+                <Link to="/about" style={{ textDecoration: 'none', color: 'black' }}><ListItem>ABOUT</ListItem></Link>
+                <Link to="/cont" style={{ textDecoration: 'none', color: 'black' }}><ListItem>CONTACT</ListItem></Link>
+                <Link to={"/fav"} style={{ textDecoration: 'none', color: 'black'}} ><ListItem>Favorait</ListItem></Link>
                 </List>
             </Center>
             <Right>

@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 // import Nav from "react-bootstrap/Nav";
 // import Navbar from "react-bootstrap/Navbar";
 import { useCookies } from "react-cookie";
+import Logoutg from "../pages/Logout"
 
 
 
@@ -95,15 +96,12 @@ function Navbar() {
     <Container>
       <Wrapper>
         <Left>
-          {/* <Language>EN</Language> */}
+         
           <Logo src="https://api.logo.com/api/v2/images?format=webp&logo=logo_5822cdcf-2211-452c-ac42-319cbd866b86&width=1000&height=750&margins=166&fit=contain&u=1668876416"></Logo>
-          {/* <SearchContainer>
-           <Input placeholder="Search"/> 
-            <SearchIcon style={{color:"gray",fontSize:16}}/>
-        </SearchContainer> */}
-        </Left>
-        {/* <Center><Logo>center</Logo></Center> */}
-        <Right>
+        </Left> 
+        
+        
+               <Right>
           <Link to="/" style={{ textDecoration: 'none', color: 'black' }}><MenuItem>HOME</MenuItem></Link>
           <Link to="/about" style={{ textDecoration: 'none', color: 'black' }}><MenuItem>ABOUT</MenuItem></Link>
           <Link to="/cont" style={{ textDecoration: 'none', color: 'black' }}><MenuItem>CONTACT</MenuItem></Link>
@@ -114,16 +112,20 @@ function Navbar() {
           </Nav>
           <Nav>
             <Link to={"/log"} style={{ textDecoration: 'none', color: 'black' }}>
-              {cookies.currentUser != null && (
-                <MenuItem> <Logout variant="success" onClick={handelLogout} /></MenuItem>
-              )}
+            {cookies.currentUser != null &&
+                  (cookies.currentUser.googleId != "" ? (
+                    <MenuItem><Logoutg/> </MenuItem>
+                  ) : (
+                    <MenuItem> <Logout variant="success" onClick={handelLogout} /></MenuItem>
+                  ))}
+             
             </Link>
           </Nav>
           {/* <Link to="/reg" style={{ textDecoration: 'none', color: 'black' }}><MenuItem>REGISTER</MenuItem></Link> */}
 
           {/* <Badge badgeContent={4} color="primary"> */}
-          <Link to={"/fav"} style={{ textDecoration: 'none', color: 'black'}} >
-              <MenuItem><FavoriteBorderOutlined /></MenuItem></Link>
+          {/* <Link to={"/fav"} style={{ textDecoration: 'none', color: 'black'}} >
+              <MenuItem><FavoriteBorderOutlined /></MenuItem></Link> */}
 
       {/* </Badge> */}
           

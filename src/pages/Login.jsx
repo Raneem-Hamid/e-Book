@@ -7,6 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import Navbar from '../components/Navbar';
+import Logingoogle from './Logingoogle';
 
 const MySwal = withReactContent(Swal);
 
@@ -106,6 +107,7 @@ function Login() {
         <Wrapper>
             <Title>SIGN IN </Title>
             <Form>
+              <Logingoogle/>
                 <Input type="text" placeholder="Email"id="email"/>
                 <Input type='password'placeholder="Password" id="password"/>
                 <Button type="button"onClick={handelSubmit}>Sign in</Button>

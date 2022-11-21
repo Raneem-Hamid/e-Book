@@ -16,7 +16,7 @@ const Container = styled.div`
 function Coppyright() {
   return (
    <Container>
-    coppyright
+    E-Book &copy;2022
    </Container>
   )
 }

@@ -70,9 +70,9 @@ function Book({data}) {
     {/* <Circle/> */}
     <Image src={data.image_url}/>
     <Info>
-        <Link to={"/fav/"+data.id} style={{color:"teal"}}><Icon>
+        {/* <Link to={"/fav/"+data.id} style={{color:"teal"}}><Icon>
             <FavoriteBorderOutlined/>
-        </Icon></Link>
+        </Icon></Link> */}
     <Link to={"/singleb/"+data.id} style={{color:"teal"}}><Icon>
             <AutoStoriesOutlined/>
         </Icon></Link>

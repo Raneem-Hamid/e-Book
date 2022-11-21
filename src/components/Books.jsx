@@ -27,6 +27,8 @@ function Books() {
   const [post ,setPost] = useState([]);
   const [posts,setPosts] = useState([]);
   const [result , setResult] = useState("");
+  const [result2 , setResult2] = useState("");
+
 
 const apiUrl = "https://example-data.draftbit.com/books?_limit=24";
 
@@ -38,10 +40,24 @@ const apiUrl = "https://example-data.draftbit.com/books?_limit=24";
     });
   }, []);
 
+
+
+
   // useEffect(()=>{
   //   console.log(post);
   //   setPosts(post);
   // },[])
+
+  useEffect(()=>{
+    console.log(result2);
+    const arr=post.filter(item=>{console.log( item.rating);
+      return  Number(item.rating) <= Number(result2);
+        });
+       
+            
+    setPosts(arr);
+
+  },[result2])
 
   useEffect(()=>{
     console.log(result);
@@ -52,10 +68,11 @@ const apiUrl = "https://example-data.draftbit.com/books?_limit=24";
 
   },[result])
 
+
   return (
 <>
     <Div>
-   <Search result={result} setResult={setResult}/>
+   <Search result={result} setResult={setResult } result2={result2} setResult2={setResult2}/>
    <Container>
     {/*?.filter((pos)=> pos.volumeInfo.imageLinks) */}
     {  posts?.map((item,i)=>(

@@ -50,12 +50,12 @@ font-weight: 500;
 letter-spacing:3px;
 
 `;
-const Button = styled.button`
-padding: 10px;
-font-size: 20px;
-background-color:transparent;
-cursor: pointer;
-`;
+// const Button = styled.button`
+// padding: 10px;
+// font-size: 20px;
+// background-color:transparent;
+// cursor: pointer;
+// `;
 
 function About() {
   return (
@@ -67,9 +67,8 @@ function About() {
         <Slide>
         <ImgContainer><Img src="https://images.pexels.com/photos/4219038/pexels-photo-4219038.jpeg?auto=compress&cs=tinysrgb&w=600"/></ImgContainer>
         <InfoContainer>
-            <Title>Title</Title>
-            <Desc>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis rerum minima error autem modi, mollitia doloremque magnam aut illo obcaecati harum reprehenderit officia sunt soluta voluptates delectus ut! Vitae, porro!</Desc>
-            <Button>Show now</Button>
+            <Title>ABOUT US</Title>
+            <Desc>A website that helps you find the books you want, know the author, read the description of the book, and know its rating, and you can add it to your favorites list..!</Desc>
         </InfoContainer>
         </Slide>
     </Wrapper>
